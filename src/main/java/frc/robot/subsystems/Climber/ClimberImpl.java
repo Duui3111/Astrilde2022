@@ -32,7 +32,7 @@ public class ClimberImpl implements Climber {
         long now = System.nanoTime();
         if(this.starttime < 0) this.starttime = now;
         this.lifterMotorController.set(1); // test value
-        if(now > this.starttime + TimeUnit.SECONDS.toNanos(5)) this.lifterMotorController.set(0);
+        if(now > this.starttime + TimeUnit.SECONDS.toNanos(5)) this.lifterMotorController.set(-1);
     }
 
     @Override
